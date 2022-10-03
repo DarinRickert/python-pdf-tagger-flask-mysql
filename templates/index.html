@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>PDF Tagger</h3>
+
+<!-- PDF drag box/upload box -->
+  <div class="col-sm-12 text-center" id="pdfBox">
+    <p>Drop PDF here or click to upload</p>
+    <input type="file" class="custom-file-input" id="inputFile"
+    accept=".pdf">
+  </div>
+
+ <!-- PDF file name/confirmed upload -->
+ <div class="row mt-3">
+  <div class="col-sm-12 text-center">
+    <p class="d-inline" id="fileName"></p>
+    <svg id="checkMark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16" visibility="hidden">
+      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+    </svg>
+  </div>
+ </div>
+
+<!-- New row -->
+<div class="row mt-3">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <!-- Form -->
+    <form>
+      <!-- Output folder input -->
+      <div class="form-group row">
+        <label for="fileFolderTag" class="col-sm-4 col-form-label">Output Folder</label>
+        <div class="col-sm-8">
+          <input name="output_folder" type="text" class="form-control" placeholder="output folder" id="fileFolderTag" required maxlength="50">
+        </div>
+      </div>
+      <!-- Loan Number -->
+      <div class="form-group row">
+        <label for="numberTag" class="col-sm-4 col-form-label">Number</label>
+        <div class="col-sm-8">
+          <input name="number" type="text" class="form-control" placeholder="numbers only" id="numberTag" required maxlength="11">
+        </div>
+      </div>
+      <!-- eFolder -->
+      <div class="form-group row">
+        <label for="dropdownTag" class="col-sm-4 col-form-label">Dropdown</label>
+        <div class="col-sm-8">
+          <!-- drop down -->
+          <select name="dropdown" id="dropdownTag"  class="form-select">
+            <option value="dropdown1" selected>dropdown1</option>
+            <option value="dropdown2">dropdown2</option>
+            <option value="0dropdown3">dropdown3</option>
+            <option value="dropdown4">dropdown4</option>
+          </select>
+        </div>
+      </div>
+      <!-- Checkbox -->
+      <div class="form-group row">
+        <div class="col-sm-3"></div>
+          <label for="checkbox" class="col-sm-4 col-form-label">Checkbox</label>
+          <div class="col-sm-1">
+          <input class="form-check-input" type="checkbox" value="null" id="checkbox">
+         </div>
+          <div class="col-sm-4"></div>
+          </div>
+    </form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+
+<!-- New row -->
+<div class="row">
+  <div class="col-sm-4"></div>
+
+  <!-- Submit button -->
+  <div class="col-sm-4">
+    <button class="btn btn-primary" type="submit" id="submitButton">Submit</button>
+  </div>
+
+  <!-- Status/error box -->
+  <div class="col-sm-3 text-center" id="statusErrorBox">
+    <p class="text-success" id="successMessage">Success! Page will refresh</p>
+    <p class="text-danger d-none">Error message</p>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}
