@@ -16,7 +16,7 @@ This application will work as is, but can be easily modified to add more feature
 
 The main value of this application is to store meta data in a pdf so that it can be later parsed and used elsewhere. 
 
-E.g. you have pdfs of customr information that you want tied to their internal customer identification number. With this application you can tag the customer pdfs with their internal GUID, save the tagged pdfs in a database, and access them by another internal application.
+E.g. you have pdfs of customer information that you want tied to their internal customer identification number. With this application you can tag the customer pdfs with their internal GUID, save the tagged pdfs in a database, and access them by another internal application.
 
 ### Pre-requisites:
 
